@@ -28,21 +28,21 @@ router.get('/', async (req,res) => {
     
 });
 
-router.post('/', async (req,res) => {
-    const post = new Filter({
-        patientId:req.body.patientId,
-        reportedOn:req.body.reportedOn,
-        ageEstimate:req.body.ageEstimate,
-        gender:req.body.gender,
-        state:req.body.state,
-        status:req.body.status
-    });
-    console.log(post)
-    try{
-    await post.save();
-    res.json(post);
-    }catch (err){
-        res.json({ message: err });
-    }
-});
+// router.post('/', async (req,res) => {
+//     const post = new Filter({
+//         patientId:req.body.patientId,
+//         reportedOn:req.body.reportedOn,
+//         ageEstimate:req.body.ageEstimate,
+//         gender:req.body.gender,
+//         state:req.body.state,
+//         status:req.body.status
+//     });
+//     console.log(post)
+//     try{
+//     await post.save();
+//     res.json(post);
+//     }catch (err){
+//         res.json({ message: err });
+//     }
+// });
 module.exports = router;
