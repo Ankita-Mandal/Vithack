@@ -1,7 +1,7 @@
 const express = require('express');
 
 const router =express.Router();
-const Filter = require('../models/Filter')
+// const Filter = require('../models/Filter')
 const jsonData = require('../mydata.json');
 
 
